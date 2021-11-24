@@ -1,0 +1,16 @@
+<nav class="nav-container">    
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Pick And Go</span>
+        <span class="example-spacer"></span>
+        <a *ngFor="let link of links" [href]="link.route">{{link.name}}</a>
+        
+        <a href="#" class="cart">
+            <mat-icon>
+                shopping_cart
+            </mat-icon>
+        </a>
+    </mat-toolbar>
+</nav>

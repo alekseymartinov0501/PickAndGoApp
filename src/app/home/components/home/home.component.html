@@ -1,0 +1,88 @@
+<header>
+    <app-navbar></app-navbar>
+    <section class="textos-header">
+        <h1>Pick&Go</h1>
+        <h2>Tu Supermercado online</h2>
+    </section>
+    <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C145.59,191.94 379.22,-74.50 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;"></path>
+        </svg></div>
+</header>
+<main>
+    <section class="contenedor-sobre-nosotros">
+        <h2 class="titulo">Quienes Somos?</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img src="assets/img/quienes.png" alt="" class="imagen-about-us">
+            <div class="contenido-textos">
+                <h3><span>1</span>Compra seguro con Pick&Go</h3>
+                <p>Gracias a las nuevas tecnologias de comunicacion puedes escoger entre tus articulos preferidos,
+                    pagarlos en linea o en la tienda sin hacer fila! </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="portafolio">
+        <div class="contenedor">
+            <h2 class="titulo">Nuestros Productos</h2>
+
+            <div class="galeria-port">
+                <ng-container *ngFor="let item of categories" (click)="categoriesView(item.id)">
+                    <div class="imagen-port">
+                        <img [src]="item.imageUrl" alt="">
+                        <div class="hover-galeria">
+                            <img src="assets/img/HoverIcon.png" alt="">
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor-sobre-nosotros">
+        <h2 class="titulo">Como Funciona?</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img src="assets/img/go.png" alt="" class="imagen-about-us">
+            <div class="contenido-textos">
+                <h3><span>1</span>Evita las filas</h3>
+                <p>Ordena en linea, y paga por la misma, o pagas en la tienda con efectivo tarjeta o transferencia
+                </p>
+                <h3><span>2</span>Ahorras tiempo</h3>
+                <p>Ahorra tiempo viendo todos los productos que la tienda tiene en stock y asi evitas hacer filas
+                    innecesarias</p>
+                <h3><span>3</span>Trabajamos a tu tiempo.</h3>
+                <p>Puedes ordenar y cancelar tus productos y decidir a que horas pasar recogiendolo</p>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="about-payment">
+        <div class="contenedor">
+            <h2 class="titulo">Nuestros metodos de pago</h2>
+            <div class="servicio-cont">
+
+                <div class="servicio-ind">
+                    <img src="assets/img/cash.png" alt="">
+                    <h3>cash</h3>
+                    <p>Puedes pagar en efectivo</p>
+                </div>
+
+                <div class="servicio-ind">
+                    <img src="assets/img/pagos.jpg" alt="">
+                    <h3>Debit & Credit Card</h3>
+                    <p>Puedes con tarjetas</p>
+                </div>
+
+                <div class="servicio-ind">
+                    <img src="assets/img/transfer.png" alt="">
+                    <h3>Bank Transfer</h3>
+                    <p>Puedes pagar en con transferencia</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+<app-footer></app-footer>
