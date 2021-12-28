@@ -1,15 +1,4 @@
-<header>
-    <app-navbar></app-navbar>
-    <section class="textos-header">
-        <h1>Pick&Go</h1>
-        <h2>Tu Supermercado online</h2>
-    </section>
-    <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-            style="height: 100%; width: 100%;">
-            <path d="M0.00,49.98 C145.59,191.94 379.22,-74.50 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: #fff;"></path>
-        </svg></div>
-</header>
+
 <main>
     <section class="contenedor-sobre-nosotros">
         <h2 class="titulo">Quienes Somos?</h2>
@@ -19,6 +8,10 @@
                 <h3><span>1</span>Compra seguro con Pick&Go</h3>
                 <p>Gracias a las nuevas tecnologias de comunicacion puedes escoger entre tus articulos preferidos,
                     pagarlos en linea o en la tienda sin hacer fila! </p>
+                    <h3><span>2</span>Aprovecha tu tiempo</h3>
+                <p>Podras ver todos los productos que tenemos en existencia asi evitas hacer una fila innecesaria  </p>
+                <h3><span>3</span>Compra seguro con Pick&Go</h3>
+                <p>Gracias a nuestros protocolos de seguridad informatica puedes pagar sin miedo con tus medios de pagos electronicos, o si prefieres solo encarga y paga en la tienda. asi de facil y rapido! </p>
             </div>
         </div>
 
@@ -28,8 +21,8 @@
             <h2 class="titulo">Nuestros Productos</h2>
 
             <div class="galeria-port">
-                <ng-container *ngFor="let item of categories" (click)="categoriesView(item.id)">
-                    <div class="imagen-port">
+                <ng-container *ngFor="let item of categories">
+                    <div class="imagen-port" (click)="categoriesView(item.id)">
                         <img [src]="item.imageUrl" alt="">
                         <div class="hover-galeria">
                             <img src="assets/img/HoverIcon.png" alt="">
@@ -58,7 +51,7 @@
         </div>
 
     </section>
-    <section class="about-payment">
+    <!-- <section class="about-payment">
         <div class="contenedor">
             <h2 class="titulo">Nuestros metodos de pago</h2>
             <div class="servicio-cont">
@@ -83,6 +76,6 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 </main>
 <app-footer></app-footer>

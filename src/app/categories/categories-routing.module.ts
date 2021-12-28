@@ -4,7 +4,7 @@ import { CategoriesComponent } from './categories/categories.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'main/:id',
     component: CategoriesComponent
   }
 ];

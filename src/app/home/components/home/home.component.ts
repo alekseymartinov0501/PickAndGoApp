@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Category } from 'src/app/models/Category';
+import { Category } from 'src/app/categories/models/category';
 import { CategoriesService } from 'src/app/shared-components/services/categories.service';
 
 @Component({
@@ -31,7 +31,8 @@ export class HomeComponent implements OnInit {
   }
 
   categoriesView(id: number){
-    this.router.navigate(["/categories" + id]);
+    this.router.navigate(['/categorias/main', id]);
+    console.log(id)
   }
 
 }
